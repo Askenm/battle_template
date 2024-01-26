@@ -1,6 +1,6 @@
 from ..boilerplate.implementation import is_water_system_efficient
 import unittest
-from ..SoftwareEngineeringSubmodule.implementation.backend.DataPersistenceService import DBMS
+from ..SoftwareEngineeringSubmodule.Implementation.backend.DataPersistenceService import DBMS
 
 class Test(unittest.TestCase):
     def test_efficient_system(self):
