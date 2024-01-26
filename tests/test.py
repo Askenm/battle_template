@@ -1,82 +1,17 @@
-from boilerplate.implementation import is_water_system_efficient
+from boilerplate.implementation import solution
 import unittest
 from .support.DataPersitenceService import DBMS
 import json
 
 class Test(unittest.TestCase):
-    def test_efficient_system(self):
-        grid1 = [
-            [0, 1, 0, 2, 2],
-            [1, 0, 0, 2, 0],
-            [0, 0, 0, 1, 0],
-            [0, 1, 0, 0, 2]
-        ]
+    def test1(self):
+        some_data = ...
         
-        self.assertTrue(is_water_system_efficient(grid1))
+        self.assertTrue(solution(some_data))
 
-        grid2 = [
-            [0, 1, 0, 2, 2],
-            [1, 0, 0, 2, 0],
-            [0, 0, 0, 1, 0],
-            [0, 1, 0, 0, 0]
-        ]
-        self.assertTrue(is_water_system_efficient(grid2))
+       
 
-        # Add more test cases for efficient systems
 
-    def test_inefficient_system(self):
-        grid1 = [
-            [0, 1, 0, 2, 2],
-            [1, 0, 0, 2, 0],
-            [0, 0, 0, 1, 0],
-            [0, 0, 0, 0, 2]
-        ]
-        self.assertFalse(is_water_system_efficient(grid1))
-
-        grid2 = [
-            [0, 1, 0, 2, 2],
-            [1, 0, 0, 2, 0],
-            [0, 0, 0, 0, 0],
-            [0, 1, 0, 0, 2]
-        ]
-        self.assertFalse(is_water_system_efficient(grid2))
-
-        # Add more test cases for inefficient systems
-
-    def test_empty_grid(self):
-        grid = []
-        self.assertTrue(is_water_system_efficient(grid))
-
-    def test_single_pump(self):
-        grid = [[1]]
-        self.assertTrue(is_water_system_efficient(grid))
-
-    def test_single_pipe(self):
-        grid = [[2]]
-        self.assertFalse(is_water_system_efficient(grid))
-
-    def test_multiple_pumps(self):
-        grid = [
-            [1, 0, 1],
-            [0, 1, 0],
-            [1, 0, 1]
-        ]
-        self.assertTrue(is_water_system_efficient(grid))
-
-        grid = [
-            [1, 0, 1],
-            [0, 0, 0],
-            [1, 0, 1]
-        ]
-        self.assertTrue(is_water_system_efficient(grid))
-
-    def test_no_pumps(self):
-        grid = [
-            [0, 0, 0],
-            [0, 0, 0],
-            [0, 0, 0]
-        ]
-        self.assertFalse(is_water_system_efficient(grid))
 
 
 def run_tests():
@@ -91,6 +26,7 @@ def run_tests():
     score = round(num_passes/(num_passes+num_failures)*100,2)
 
     return score
+
 
 def get_group_name():
     f = json.loads(open('boilerplate/group_info.json','r').read())
@@ -121,9 +57,6 @@ def main():
     
     
     DBMS_.write('ASSIGN_AUTOMATIC_SCORE',submission_info)
-
-    # UPLOAD NOTIFICATION TO MESSAGE BOARD
-    # TODO put this in backend_main
 
 
 
