@@ -93,7 +93,7 @@ def run_tests():
     return score
 
 def get_group_name():
-    f = json.loads(open('boilerplate/group_info.json','r').read())['group_name']
+    f = json.loads(open('boilerplate/group_info.json','r').read())
     return f['group_name'],f['battle_name']
 
 
