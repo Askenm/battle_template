@@ -1,6 +1,7 @@
-from ..boilerplate.implementation import is_water_system_efficient
+from boilerplate.implementation import is_water_system_efficient
 import unittest
-from ..SoftwareEngineeringSubmodule.Implementation.backend.DataPersitenceService import DBMS
+from .support.DataPersitenceService import DBMS
+import json
 
 class Test(unittest.TestCase):
     def test_efficient_system(self):
@@ -91,6 +92,10 @@ def run_tests():
 
     return score
 
+def get_group_name():
+    f = json.loads(open('boilerplate/group_info.json','r').read())['group_name']
+    return f['group_name'],f['battle_name']
+
 
 def main():
     
@@ -100,7 +105,25 @@ def main():
     # Find commit id
     # Find github name of repository holder
 
+    DBMS_ = DBMS()
+    group_name,battle_name = get_group_name()
+
+
+    df = DBMS_.read('GET_GROUP_ID_FROM_GROUP_NAME',{'_GROUP_NAME_':group_name,
+                                                     '_BATTLE_NAME_':battle_name})
+    
+    gid = df['gid'].values[0]
+    bid = df['bid'].values[0]
+
+    submission_info = {'_SCORE_':score,
+                       '_GROUP_ID_':gid,
+                       '_BATTLE_ID_':bid}
+    
+    
+    DBMS_.write('ASSIGN_AUTOMATIC_SCORE',submission_info)
+
     # UPLOAD NOTIFICATION TO MESSAGE BOARD
+    # TODO put this in backend_main
 
 
 
