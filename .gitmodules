@@ -1,0 +1,3 @@
+[submodule "SoftwareEngineeringSubmodule"]
+	path = SoftwareEngineeringSubmodule
+	url = git@github.com:Askenm/SoftwareEngineering.git
