@@ -1,1 +1,2 @@
 # actions
+# battle_template
