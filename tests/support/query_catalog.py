@@ -49,7 +49,7 @@ query_catalog = {
                                    VALUES ( _USER_ID_,_TOURNAMENT_ID_);
                                    """,
        "ASSIGN_MANUAL_SCORE":      """
-                                   INSERT INTO ckb.submissions (bid, gid,score)
+                                   INSERT INTO ckb.submissions (battle_id, gid,score)
                                    VALUES ( _BATTLE_ID_,_GROUP_ID_,_SCORE_);
                                    """,
        "ASSIGN_AUTOMATIC_SCORE":      """
