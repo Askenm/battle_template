@@ -1,5 +1,7 @@
 # For Educators 🎓✨👩‍🏫👨‍🏫
 
+(we assume you have cloned this repository and is making it your own. Yass slay <3)
+
 **WELCOME** to your new arena of challenge and growth! 🚀🎉 As you embark on this thrilling journey to create a battle, 🛡️🗡️ we invite you to dive into the `tests.test` file 📂🔍 to carve out the challenges your students will face. Here, you're not just educators; you're architects of learning experiences. 🏗️🎨 We encourage you to weave in engaging descriptions, captivating stories, and practical examples 📚💬 right below this section. At CKB, we believe learning should be as enjoyable as it is enriching—so let's make it a memorable adventure for our students! 🌈🌟
 
 Don't forget an essential step: naming your battle in the **boilerplate/group_info.json** file. 📝✏️ This is where your creativity shines 🌟🎨, setting the tone for the challenges ahead.
